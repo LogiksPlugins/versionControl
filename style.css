@@ -1,0 +1,27 @@
+#pgsidebar .list-group-item {
+    cursor: pointer;
+}
+#pgsidebar .list-group-item .title {
+    text-transform: capitalize;
+}
+#pgsidebar .list-group-item citie {
+    font-size: 8px;
+    float: right;
+    margin-top: 4px;
+}
+#pgsidebar .list-group-item .fa {
+    margin-top: 4px;
+}
+#pgcontent pre {
+    white-space: pre-wrap;
+}
+* {
+    border-radius: 0px !important;
+}
+.tab-pane {
+    padding: 5px;
+}
+pre {
+    margin: 10px;
+    border-radius: 0px;
+}
