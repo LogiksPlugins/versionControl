@@ -38,8 +38,8 @@ printPageComponent(false,[
 // 			"scrapGitRepo"=>["icon"=>"<i class='fa fa-broom'></i>","title"=>"Scrap","class"=>"onrepoload","align"=>"right"],
 // 			"stashGitRepo"=>["icon"=>"<i class='fa fa-angle-double-right'></i>","title"=>"Stash","class"=>"onrepoload","align"=>"right"],
 // 			['type'=>"bar"],
-			"pushGitRepo"=>["icon"=>"<i class='fa fa-upload'></i>","title"=>"Push","class"=>"onrepoload","align"=>"right"],
-			"pullGitRepo"=>["icon"=>"<i class='fa fa-download'></i>","title"=>"Pull","class"=>"onrepoload","align"=>"right"],
+// 			"pushGitRepo"=>["icon"=>"<i class='fa fa-upload'></i>","title"=>"Push","class"=>"onrepoload","align"=>"right"],
+// 			"pullGitRepo"=>["icon"=>"<i class='fa fa-download'></i>","title"=>"Pull","class"=>"onrepoload","align"=>"right"],
 			
 // 			"generateRoles"=>["icon"=>"<i class='fa fa-gears'></i>","tips"=>"Generate New Roles"],
 			//"createTemplate"=>["icon"=>"<i class='fa fa-plus'></i>","tips"=>"Create New"],

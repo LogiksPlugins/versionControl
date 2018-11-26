@@ -20,7 +20,7 @@ if(isset($_REQUEST['path']) && strlen($_REQUEST['path'])>0) {
     $repoPath = str_replace("//","/",$repoPath);
 
     if(!file_exists($repoPath) || !is_dir($repoPath)) {
-        printServiceMsg(["error"=>"Give repo folder does not exist"]);
+        printServiceMsg("Given repo folder does not exist");
         return;
     }
 }
@@ -35,6 +35,9 @@ $gitrepo = new GitRepo($repoPath);
 
 switch ($_REQUEST['action']) {
     case "generate-key":
+//         $ans = logiksRunCmd("ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts");
+//         $ans = logiksRunCmd("pwd");
+//         printServiceMsg($ans);
         // $ans = logiksRunCmd("ssh-keygen -b 2048 -t rsa -f /var/www/.ssh/id_rsa -q -N \"\"");
         // printServiceMsg($ans);
         // echo file_get_contents("/var/www/.ssh/id_rsa.pub");

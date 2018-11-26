@@ -4,6 +4,7 @@ $infoArr = [
     "https://git-scm.com/docs/"=>"Git Reference",
     "https://guides.github.com/introduction/git-handbook/"=>"Git Handbook",
     "https://help.github.com/articles/set-up-git/"=>"Set up git",
+    "https://gist.github.com/silkadmin/721e87c4bb8304ac077f2736378b6d92"=>"Common Git Commands",
     "https://backlog.com/git-tutorial/"=>"Git Tutorial",
 ];
 ?>
