@@ -81,7 +81,7 @@ switch ($_REQUEST['action']) {
         break;    
     case "changes":case "gitstatus":
         $ans = $gitrepo->gitStatus();
-        printServiceMsg($ans);
+        printServiceMsg(["repo"=>$_REQUEST['path'],"status"=>$ans]);
         break;
     case "history":
         $ans = $gitrepo->gitLog();

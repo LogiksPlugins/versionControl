@@ -79,8 +79,8 @@ function loadCommitHistory() {
 }
 function loadChanges() {
     processAJAXQuery(_service("versionControl","changes")+"&path="+currentPath+"&branch="+currentBranch, function(ans) {
-        if(Array.isArray(ans.Data)) {
-          ans.Data = ans.Data.join("\n");  
+        if(ans.Data.status!=null && Array.isArray(ans.Data.status)) {
+          ans.Data = ans.Data.status.join("\n");  
         }
         $("#changes").html("<pre>"+ans.Data+"</pre>");
     },"json");

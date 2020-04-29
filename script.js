@@ -65,8 +65,26 @@ function listREPOS() {
                             },"json");
                 	}
                 });
+        } else {
+            checkRepoStatus();
         }
     },"json");
+}
+function checkRepoStatus() {
+    $("#pgtoolbar .nav.navbar-left").append("<li class='navloading'><div class='pull-left ajaxloading ajaxloading8' style='padding: 13px;'>Detecting Changes</div></li>")
+    checkCount = 0; 
+    $(".list-group-item","#sidebarArea").each(function(a) {
+        path = $(this).data("path");
+        processAJAXQuery(_service("versionControl","gitstatus","json")+"&path="+path, function(ans) {
+            if(ans.Data.status.length>4) {
+                $(".list-group-item[data-path='"+ans.Data.repo+"']","#sidebarArea").find(".label").attr("class","label label-warning");
+            }
+            checkCount++;
+            if(checkCount>=$(".list-group-item","#sidebarArea").length) {
+                $("#pgtoolbar .nav.navbar-left .navloading").detach();
+            }
+        }, "json")
+    });
 }
 function addGitRepo() {
     lgksPrompt("Relative path to git folder (/ for app, plugins/modules/<moduleName>, etc)","Create Repo", function(ans) {
